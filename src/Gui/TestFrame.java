@@ -29,7 +29,7 @@ public class TestFrame extends JFrame {
         add(dataPanel,BorderLayout.NORTH);
         add(mainPanel,BorderLayout.CENTER);
 
-
+        setExtendedState(JFrame.MAXIMIZED_BOTH);
 
 
     }

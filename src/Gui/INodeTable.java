@@ -14,6 +14,7 @@ public class INodeTable extends JTable {
         super();
         setSize(100,500);
         setVisible(true);
+        setRowHeight(20);
         setModel(new INodeModel());
 
     }

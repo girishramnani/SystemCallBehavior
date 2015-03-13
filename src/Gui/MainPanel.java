@@ -18,12 +18,6 @@ public class MainPanel extends JPanel {
     public MainPanel(){
         super();
         setLayout(null);
-        LayeredDataBlock db = new LayeredDataBlock(new Payload(3301,256,23423432,new IntPoint(20,200)));
-        db.setVisible(true);
-        db.setSize(1000, 1000);
-        add(db);
-        db.addNextNode(this).setSize(400,500);
-
 
 
     }

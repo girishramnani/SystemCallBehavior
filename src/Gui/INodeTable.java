@@ -13,7 +13,7 @@ import javax.swing.table.TableColumn;
 public class INodeTable extends JTable {
     private DefaultTableCellRenderer cellRenderer;
 
-    private static int HEIGHT=500;
+    public static final int HEIGHT=500;
     private static int WIDTH =150;
     public INodeTable(){
         super();

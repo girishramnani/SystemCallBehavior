@@ -19,7 +19,7 @@ public class MainPanel extends JPanel {
         super();
         setLayout(null);
         jTable = new INodeTable();
-        jTable.setLocation(200,0);
+        jTable.setLocation(200,50);
         jTable.setVisible(true);
         add(jTable);
 

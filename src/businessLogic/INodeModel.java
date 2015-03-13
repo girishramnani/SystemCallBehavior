@@ -3,20 +3,24 @@ package businessLogic;
 import Gui.INodeTable;
 
 import javax.swing.table.AbstractTableModel;
+import javax.swing.table.DefaultTableModel;
 import java.util.ArrayList;
 import java.util.LongSummaryStatistics;
 
 
 public class INodeModel extends AbstractTableModel {
-    ArrayList<Long> datablock ;
+    ArrayList<String> datablock ;
 
     private void setToDefault(){
-        datablock = new ArrayList<Long>();
+
+        datablock = new ArrayList<String>();
         for(int i=0;i<10;i++)
-        datablock.add(0L);
+        datablock.add(0L+" ");
     }
     public INodeModel(){
+        super();
         setToDefault();
+
 
     }
 
@@ -25,7 +29,7 @@ public class INodeModel extends AbstractTableModel {
         return "INODE TABLE";
     }
 
-    public INodeModel(ArrayList<Long> arrayList) {
+    public INodeModel(ArrayList<String> arrayList) {
         datablock = arrayList;
     }
 

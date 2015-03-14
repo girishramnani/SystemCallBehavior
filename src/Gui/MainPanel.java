@@ -22,13 +22,19 @@ public class MainPanel extends JPanel {
                 jTable = new INodeTable();
                 jTable.setLocation(200,50);
                 jTable.setVisible(true);
-                firstIndirect = new LayeredDataBlock(new Payload(1020L,453L,23432L,new IntPoint(400,300)));
-                firstIndirect.setSize(1000,500);
-                LayeredDataBlock x =firstIndirect.addNextNode(this);
-                x.setSize(1000,500);
-                x.addNextNode(this).setSize(1000,500);
-                add(firstIndirect);
+                AddTriPanel(Payload.generateTriPayload(1000L,200L,5634L));
                 add(jTable);
+
+    }
+
+    public void AddTriPanel(Payload payload){
+        thirdIndirect = new LayeredDataBlock(payload);
+        thirdIndirect.setSize(1000, 1000);
+        LayeredDataBlock x =thirdIndirect.addNextNode(this);
+        x.setSize(1000,1000);
+        x.addNextNode(this).setSize(1000,1000);
+        add(thirdIndirect);
+
 
     }
 

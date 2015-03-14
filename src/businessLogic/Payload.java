@@ -9,7 +9,10 @@ public class Payload {
     private long content;
     private IntPoint location;
 
+    public static Payload generateTriPayload(long address, long capacity, long content){
+        return new Payload(address,capacity,content, new IntPoint(500,500));
 
+    }
     public Payload(long address, long capacity, long content, IntPoint location) {
         this.address = address;
         this.capacity = capacity;

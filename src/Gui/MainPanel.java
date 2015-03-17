@@ -22,7 +22,7 @@ public class MainPanel extends JPanel {
                 jTable = new INodeTable();
                 jTable.setLocation(200,50);
                 jTable.setVisible(true);
-                AddTriPanel(Payload.generateTriPayload(1000L,200L,5634L));
+                AddTriPanel(Payload.generateTriPayload(50L,1000L,5634L));
                 add(jTable);
 
     }

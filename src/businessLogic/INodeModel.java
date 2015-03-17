@@ -14,7 +14,7 @@ public class INodeModel extends AbstractTableModel {
     private void setToDefault(){
 
         datablock = new ArrayList<String>();
-        for(int i=0;i<10;i++)
+        for(int i=0;i<13;i++)
         datablock.add(0L+" ");
     }
     public INodeModel(){

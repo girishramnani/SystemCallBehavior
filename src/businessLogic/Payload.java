@@ -14,6 +14,14 @@ public class Payload {
 
     }
     public Payload(long address, long capacity, long content, IntPoint location) {
+        if(capacity <address) {
+            try {
+                throw new PayloadException("The capacity is less than the address");
+            } catch (PayloadException e) {
+                e.printStackTrace();
+                System.exit(-1);
+            }
+        }
         this.address = address;
         this.capacity = capacity;
         this.content = content;

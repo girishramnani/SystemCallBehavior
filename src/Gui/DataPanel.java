@@ -22,10 +22,6 @@ public class DataPanel  extends JPanel {
         ByteOffsetContainer = new JTextField(50);
         jLabel = new JLabel("The BitOffset :-");
 
-
-
-
-
         add(jLabel);
         Dimension d = new Dimension(10,10);
         add(new Box.Filler(d,d,d));

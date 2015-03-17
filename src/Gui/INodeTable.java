@@ -22,7 +22,7 @@ public class INodeTable extends JTable {
         setModel(new INodeModel());
         getColumn("INODE TABLE").setCellRenderer(cellRenderer);
         setSize(WIDTH, HEIGHT);
-        setRowHeight(HEIGHT/10);
+        setRowHeight(HEIGHT/13);
 
 
 

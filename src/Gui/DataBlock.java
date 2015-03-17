@@ -32,9 +32,11 @@ public class DataBlock extends JPanel {
 
         if (payload != null){
             g2d.drawRect(payload.getLocationFinal().getX(),payload.getLocationFinal().getY(),50,100);
+
             g2d.drawString(payload.getCapacity()+" ",payload.getLocationFinal().getX()+10,payload.getLocationFinal().getY()+120);
-            payload.getContent();
-            payload.getCapacity();
+            int  a = (int) (payload.getLocationFinal().getY()+((payload.getAddress()/(float)payload.getCapacity())*80));
+            g2d.drawRect(payload.getLocationFinal().getX(),a,50,20);
+            g2d.drawString(payload.getAddress()+"",payload.getLocationFinal().getX()+10,a+15);
         }
     }
 }

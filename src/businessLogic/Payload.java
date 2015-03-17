@@ -9,6 +9,8 @@ public class Payload {
     private long content;
     private IntPoint location;
 
+
+
     public static Payload generateTriPayload(long address, long capacity, long content){
         return new Payload(address,capacity,content, new IntPoint(500,500));
 
@@ -59,4 +61,9 @@ public class Payload {
     public void setContent(long content) {
         this.content = content;
     }
+    public static Payload generateDipayload(long address,long capacity,long content ){
+        return new Payload(address,capacity,content, new IntPoint(500,400));
+    }
+
+
 }

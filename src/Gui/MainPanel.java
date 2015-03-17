@@ -22,8 +22,21 @@ public class MainPanel extends JPanel {
                 jTable = new INodeTable();
                 jTable.setLocation(200,50);
                 jTable.setVisible(true);
-                AddTriPanel(Payload.generateTriPayload(50L,1000L,5634L));
+                AddDiPanel(Payload.generateDipayload(50L, 1000L, 5634L));
                 add(jTable);
+
+    }
+
+    public void AddDiPanel(Payload payload){
+        secondIndirect = new LayeredDataBlock(payload);
+        secondIndirect.setSize(1000, 1000);
+        LayeredDataBlock x =secondIndirect.addNextNode(this);
+        x.setSize(1000,1000);
+        add(secondIndirect);
+
+    }
+
+    public void addUniPanel(Payload payload){
 
     }
 

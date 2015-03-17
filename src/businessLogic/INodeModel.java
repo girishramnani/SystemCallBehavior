@@ -23,6 +23,9 @@ public class INodeModel extends AbstractTableModel {
 
 
     }
+    public void reset(){
+        setToDefault();
+    }
 
     @Override
     public String getColumnName(int column) {

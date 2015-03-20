@@ -30,13 +30,7 @@ public class INodeModel extends AbstractTableModel {
         datablock.set(row,data);
         fireTableRowsUpdated(row,row);
     }
-
-
-    @Override
-    public String getColumnName(int column) {
-        return "INODE TABLE";
-    }
-
+    
     public INodeModel(ArrayList<String> arrayList) {
         datablock = arrayList;
     }

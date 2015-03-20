@@ -1,6 +1,7 @@
 package Gui;
 
 import businessLogic.DataBlockCapacity;
+import businessLogic.IntPoint;
 import businessLogic.Payload;
 
 import javax.swing.*;
@@ -11,15 +12,23 @@ import java.awt.*;
  */
 public class DataBlock extends JPanel {
     protected Payload payload;
-    public DataBlock(Payload payload){
+    protected IntPoint intPoint;
+    protected boolean overide=false;
+    public DataBlock(Payload payload, IntPoint past){
 
         super();
+        intPoint=past;
         this.payload=payload;
         if(this.payload.getContent()==0){
             payload.setContent(DataBlockCapacity.DIRECT);
         }
     }
 
+    public void Overide(){
+        this.overide=true;
+        repaint();
+
+    }
     public Payload generatePayload(){
         return null;
     }
@@ -36,6 +45,17 @@ public class DataBlock extends JPanel {
             g2d.drawString(payload.getCapacity()+" ",payload.getLocationFinal().getX()+10,payload.getLocationFinal().getY()+120);
             int  a = (int) (payload.getLocationFinal().getY()+((payload.getAddress()/(float)payload.getCapacity())*80));
             g2d.drawRect(payload.getLocationFinal().getX(),a,50,20);
+            if(intPoint !=null){
+                if (overide){
+                    g2d.drawLine(payload.getLocationFinal().getX()-5,payload.getLocationFinal().getY() + 10, this.intPoint.getX(), this.intPoint.getY()-10 );
+
+                }else
+                {
+                    g2d.drawLine(payload.getLocationFinal().getX(),payload.getLocationFinal().getY()+10,this.intPoint.getX()+30,this.intPoint.getY()+10);
+
+                }
+
+            }
             g2d.drawString(payload.getAddress()+"",payload.getLocationFinal().getX()+10,a+15);
         }
     }

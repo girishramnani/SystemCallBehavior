@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  */
 public class DataPanel  extends JPanel {
     private JButton submit;
-    private JTextField ByteOffsetContainer;
+    public JTextField ByteOffsetContainer;
     private Box layout;
     private JLabel jLabel;
     public DataPanel(){

@@ -15,6 +15,10 @@ public class Payload {
         return new Payload(address,capacity,content, new IntPoint(500,500));
 
     }
+
+    public static Payload generateUniPayload(long address, long capacity, long content){
+        return new Payload(address,capacity,content,new IntPoint(500,400));
+    }
     public Payload(long address, long capacity, long content, IntPoint location) {
         if(capacity <address) {
             try {

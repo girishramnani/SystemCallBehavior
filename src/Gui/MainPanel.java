@@ -27,7 +27,6 @@ public class MainPanel extends JPanel {
                 jTable.setVisible(true);
                 jTable.setModel(iNodeModel);
 
-                AddDiPanel(Payload.generateDipayload(50L, 1000L, 5634L));
                 add(jTable);
 
     }
@@ -35,7 +34,8 @@ public class MainPanel extends JPanel {
         return iNodeModel;
     }
     public void AddDiPanel(Payload payload){
-        secondIndirect = new LayeredDataBlock(payload);
+        secondIndirect = new LayeredDataBlock(payload,new IntPoint(300,650));
+        secondIndirect.Overide();
         secondIndirect.setSize(1000, 1000);
         LayeredDataBlock x =secondIndirect.addNextNode(this);
         x.setSize(1000,1000);
@@ -48,7 +48,7 @@ public class MainPanel extends JPanel {
     }
 
     public void AddTriPanel(Payload payload){
-        thirdIndirect = new LayeredDataBlock(payload);
+        thirdIndirect = new LayeredDataBlock(payload,new IntPoint(500,600));
         thirdIndirect.setSize(1000, 1000);
         LayeredDataBlock x =thirdIndirect.addNextNode(this);
         x.setSize(1000,1000);

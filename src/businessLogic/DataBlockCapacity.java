@@ -16,6 +16,7 @@ public class DataBlockCapacity {
         if(x ==null){
             x = new ArrayList<Long>();
             long li=DIRECT;
+            x.add(D2);
             x.add(10240L);
             x.add(SINGLE_INDIRECT);
             for(int i=2;i<4;i++) {

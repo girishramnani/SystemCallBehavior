@@ -8,6 +8,6 @@ import businessLogic.Logic;
 public class test4 {
     public static void main(String[] args) {
         long a=9000;
-        Logic.Calculate(12345);
+        Logic.Calculate(1234);
     }
 }

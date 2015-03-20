@@ -18,16 +18,16 @@ public class Logic {
         long index=0;
         long value=test;
         ArrayList<Long> ans = new ArrayList<Long>();
-        for (int i = count - 1; i >= 0; i--) {
-            if (test >= DataBlockCapacity.getlist().get(i)) {
+        int i = count - 1;
+            if (i >=0 && test >= DataBlockCapacity.getlist().get(i)) {
                 System.out.println(test / DataBlockCapacity.getlist().get(i));
                 index=test/DataBlockCapacity.getlist().get(i);
                 System.out.println(test % DataBlockCapacity.getlist().get(i));
                 value=test % DataBlockCapacity.getlist().get(i);
-                System.out.println();
+                System.out.println(count);
                 test = test % DataBlockCapacity.getlist().get(i);
             }
-        }
+
 
     return new long[]{index,value,count};
     }

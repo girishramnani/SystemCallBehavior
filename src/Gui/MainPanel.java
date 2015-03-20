@@ -12,7 +12,7 @@ import java.awt.*;
  */
 public class MainPanel extends JPanel {
     DataBlock db;
-    LayeredDataBlock firstIndirect;
+    DataBlock firstIndirect;
     LayeredDataBlock secondIndirect;
     LayeredDataBlock thirdIndirect;
     JTable jTable;
@@ -44,11 +44,13 @@ public class MainPanel extends JPanel {
     }
 
     public void addUniPanel(Payload payload){
-
+        firstIndirect = new DataBlock(payload,new IntPoint(300,520));
+        firstIndirect.setSize(1000,1000);
+        add(firstIndirect);
     }
 
     public void AddTriPanel(Payload payload){
-        thirdIndirect = new LayeredDataBlock(payload,new IntPoint(500,600));
+        thirdIndirect = new LayeredDataBlock(payload,new IntPoint(300,620));
         thirdIndirect.setSize(1000, 1000);
         LayeredDataBlock x =thirdIndirect.addNextNode(this);
         x.setSize(1000,1000);

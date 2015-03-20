@@ -51,7 +51,7 @@ public class DataBlock extends JPanel {
 
                 }else
                 {
-                    g2d.drawLine(payload.getLocationFinal().getX(),payload.getLocationFinal().getY()+10,this.intPoint.getX()+30,this.intPoint.getY()+10);
+                    g2d.drawLine(payload.getLocationFinal().getX(),payload.getLocationFinal().getY()+10,this.intPoint.getX()+50,this.intPoint.getY()+10);
 
                 }
 

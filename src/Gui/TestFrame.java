@@ -1,5 +1,6 @@
 package Gui;
 
+import businessLogic.DataBlockCapacity;
 import businessLogic.Logic;
 import businessLogic.Payload;
 
@@ -40,8 +41,20 @@ public class TestFrame extends JFrame {
                     break;
                 case 2:
                     mainPanel.iNodeModel.addData(10,x[1]+"");
-                    mainPanel.addUniPanel(Payload.generateDipayload(x[1],1<<18,435));
+                    mainPanel.addUniPanel(Payload.generateUniPayload(x[1],1<<18,435));
                     repaint();
+                    break;
+                case 3:
+                    mainPanel.iNodeModel.addData(11,x[1]+"");
+                    mainPanel.AddDiPanel(Payload.generateDipayload(x[1], DataBlockCapacity.DOUBLE_INDIRECT,342));
+                    repaint();
+                    break;
+                case 4:
+                    mainPanel.iNodeModel.addData(12,x[1]+"");
+                    mainPanel.AddTriPanel(Payload.generateTriPayload(x[1], DataBlockCapacity.TRIPLE_INDIRECT,342));
+                    repaint();
+                    break;
+
             }
         });
 

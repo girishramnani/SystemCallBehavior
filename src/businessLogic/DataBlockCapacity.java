@@ -23,7 +23,7 @@ public class DataBlockCapacity {
                 x.add(x.get(i - 1) << 8);
             }
         }
-
+        System.out.println(x);
         return  x;
 
     }

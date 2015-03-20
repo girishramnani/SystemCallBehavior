@@ -26,6 +26,11 @@ public class INodeModel extends AbstractTableModel {
     public void reset(){
         setToDefault();
     }
+    public void addData(int row,String data){
+        datablock.set(row,data);
+        fireTableRowsUpdated(row,row);
+    }
+
 
     @Override
     public String getColumnName(int column) {

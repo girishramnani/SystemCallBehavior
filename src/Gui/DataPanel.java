@@ -5,6 +5,7 @@ import com.sun.deploy.ui.UIFactory;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 
 /**
  * Created by Girish on 12-03-2015.
@@ -30,8 +31,11 @@ public class DataPanel  extends JPanel {
         add(submit);
 
 
-    }
 
+    }
+    public void addActionListner(ActionListener actionListener){
+        submit.addActionListener(actionListener);
+    }
     public final void UpdateUI(){
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());

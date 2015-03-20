@@ -16,17 +16,24 @@ public class MainPanel extends JPanel {
     LayeredDataBlock secondIndirect;
     LayeredDataBlock thirdIndirect;
     JTable jTable;
+    INodeModel iNodeModel;
     public MainPanel(){
                 super();
-                setLayout(null);
+        iNodeModel = new INodeModel();
+
+        setLayout(null);
                 jTable = new INodeTable();
                 jTable.setLocation(200,50);
                 jTable.setVisible(true);
+                jTable.setModel(iNodeModel);
+
                 AddDiPanel(Payload.generateDipayload(50L, 1000L, 5634L));
                 add(jTable);
 
     }
-
+    public INodeModel getInodeModel(){
+        return iNodeModel;
+    }
     public void AddDiPanel(Payload payload){
         secondIndirect = new LayeredDataBlock(payload);
         secondIndirect.setSize(1000, 1000);

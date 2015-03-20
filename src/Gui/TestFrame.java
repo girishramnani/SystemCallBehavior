@@ -28,6 +28,7 @@ public class TestFrame extends JFrame {
         //adding the component
         add(dataPanel,BorderLayout.NORTH);
         add(mainPanel,BorderLayout.CENTER);
+        dataPanel.addActionListner((ev)-> mainPanel.iNodeModel.addData(5,"girsih"));
 
         setExtendedState(JFrame.MAXIMIZED_BOTH);
 

@@ -30,7 +30,7 @@ public class INodeModel extends AbstractTableModel {
         datablock.set(row,data);
         fireTableRowsUpdated(row,row);
     }
-    
+
     public INodeModel(ArrayList<String> arrayList) {
         datablock = arrayList;
     }
